@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasmine Butterfield — Digital Media &amp; Web Developer</title>
+  <meta name="description"
+    content="Digital Media &amp; Computer Science student at UCF, building web experiences, 3D worlds, and interactive designs.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="nav-logo">JB<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Work</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name" data-text="Jasmine Butterfield">Jasmine Butterfield</h1>
+      <div class="hero-roles">
+        <span class="role-prefix">I build</span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">Digital Media graduate from the University of Central Florida specializing in Web and Social
+        Platforms with a minor in Computer Science. Passionate about building interactive web experiences, immersive 3D
+        worlds, and creative digital applications that blend technology with design. Experienced in web design, game
+        design, UX/UI design, and software development, with a focus on creating user-centered experiences through clean
+        code, visual
+        storytelling, and modern digital design.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+          <span class="code-filename">jasmine.ts</span>
+        </div>
+        <pre class="code-content"><code id="codeSnippet"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">01 / About</span>
+        <h2 class="section-title">Crafting <em>digital</em> experiences</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>As a graduate of the University of Central Florida, I developed a strong foundation in both Computer
+            Science and Digital Media. During my academic career, I gained experience in Java, C, C++, PHP, React
+            Native,and Python, while also building skills in front-end web development, client-side scripting, HTML,
+            JavaScript, and CSS. My technical and creative experience included working with industry-standard software
+            such as Adobe Photoshop, Adobe InDesign, Unity, Maya, Visual Studio, and Visual Studio Code. In addition, I
+            completed a Library & Information Science internship where I developed code to make the metadata cataloging
+            of aerial imagery process faster, strengthening my experience in organization, data management, and digital
+            archiving.</p>
+          <div class="about-links">
+            <a href="mailto:jasminebutterfield10@gmail.com" class="link-underline">Email Me</a>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card reveal reveal-delay-1">
+            <span class="stat-number" data-target="21">0</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Years at UCF</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-label">Dean's List Awards</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-4">
+            <span class="stat-number" data-target="9">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">02 / Work</span>
+        <h2 class="section-title">All <em>21 projects</em></h2>
+      </div>
+
+      <!-- ── Featured ── -->
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#ff6b9d;--c2:#4ecdc4"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc neural"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2026</span><span class="project-type">Web App /
+                Client-Side</span></div>
+            <h3 class="project-title">Kitty Ice Cream Cafe</h3>
+            <p class="project-desc">Extended a five-page static cat cafe site by designing and building a fully
+              client-side community recommendation board. Post, delete, and like interactions with zero backend —
+              everything in localStorage with a version key that flushes stale data when the menu changes. Locked
+              submissions to the real menu via dropdown auto-categorisation, added manual HTML escaping to prevent XSS,
+              and pre-seeded the feed so the page is never empty on first visit.</p>
+            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>localStorage
+                API</span></div>
+            <div class="project-links"><a href="https://catcafe12.netlify.app" class="project-link" target="_blank">Live
+                Site ↗</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ── Web Design ── -->
+      <p class="proj-cat-label reveal">Web Design</p>
+      <div class="projects-grid projects-3">
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/Screenshot%202025-02-28%20at%2010.35.06%20PM.png" alt="Women Art Website" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">Web Design</span>
+            </div>
+            <h3 class="project-title">Women Art Website</h3>
+            <p class="project-desc">Editorial site celebrating women in art with custom typography, responsive
+              galleries, and a strong visual identity.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/final%20project/unstoppablewoman.html"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <img src="img/Screenshot%202025-02-28%20at%2010.33.42%20PM.png" alt="Book Review Website" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">Web Design</span>
+            </div>
+            <h3 class="project-title">Book Review Website</h3>
+            <p class="project-desc">Themed book review site with a reading-focused layout and styled content sections.
+            </p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/assignment%202-4/escapebook.html" class="project-link"
+                target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#a8edea;--c2:#6c63ff"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc orbit"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">Web Design</span>
+            </div>
+            <h3 class="project-title">Memory Lane at UCF</h3>
+            <p class="project-desc">Multi-page site documenting UCF landmarks and memories with structured navigation
+              and layout.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/Screenshot%202025-02-28%20at%209.27.12%20PM.png" alt="Website Prototype" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">Web Design</span>
+            </div>
+            <h3 class="project-title">Website Prototype</h3>
+            <p class="project-desc">High-fidelity prototype exploring layout, component hierarchy, and visual design
+              decisions before build.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>UI Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── JavaScript ── -->
+      <p class="proj-cat-label reveal">JavaScript</p>
+      <div class="projects-grid projects-3">
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#00d4ff;--c2:#6c63ff"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc neural"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">JavaScript</span>
+            </div>
+            <h3 class="project-title">Survey Form</h3>
+            <p class="project-desc">Interactive form with client-side validation, dynamic field logic, and result
+              handling in vanilla JS.</p>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3716c/assignment2/survey.html" class="project-link"
+                target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <img src="img/Screenshot%202025-03-01%20at%207.53.14%20AM.png" alt="Jefferson Landing" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">JavaScript</span>
+            </div>
+            <h3 class="project-title">Jefferson Landing</h3>
+            <p class="project-desc">Interactive JS project with dynamic page elements and scripted user interactions
+              driving the experience.</p>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab10/part01/page_index.html"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <img src="img/Screenshot%202025-03-01%20at%207.22.07%20AM.png" alt="Social Media Posting" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">JavaScript</span>
+            </div>
+            <h3 class="project-title">Social Media Posting</h3>
+            <p class="project-desc">JS app simulating a social post flow with DOM manipulation and real-time event
+              handling throughout.</p>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab10/part02/snake.html"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#ff6b6b;--c2:#ffd93d"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc prism"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">JavaScript</span>
+            </div>
+            <h3 class="project-title">Season Survey</h3>
+            <p class="project-desc">Group project capturing seasonal preferences with JavaScript-driven dynamic result
+              display.</p>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab0506/group01.html" class="project-link"
+                target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#c792ea;--c2:#00d4ff"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc neural"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">JavaScript</span>
+            </div>
+            <h3 class="project-title">Gallery Website</h3>
+            <p class="project-desc">Dynamic image gallery with JS-driven lightbox, filtering, and keyboard navigation
+              support.</p>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab11/gallery.html" class="project-link"
+                target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── PHP / Server-Side ── -->
+      <p class="proj-cat-label reveal">PHP &amp; Server-Side</p>
+      <div class="projects-grid projects-3">
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#ff6b6b;--c2:#ff9a3c"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc velocity"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">PHP /
+                Server-Side</span></div>
+            <h3 class="project-title">Review Website</h3>
+            <p class="project-desc">Full server-side review platform with user authentication, XML data storage, and SQL
+              database integration.</p>
+            <div class="project-tech"><span>PHP</span><span>XML</span><span>SQL</span><span>HTML</span></div>
+            <div class="project-links"><a href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment06/login.php"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#ffd93d;--c2:#ff6b6b"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc prism"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">PHP</span></div>
+            <h3 class="project-title">Thanksgiving To-Do List</h3>
+            <p class="project-desc">PHP-powered to-do app with server-side task persistence and a holiday-themed UI.</p>
+            <div class="project-tech"><span>PHP</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment04/todo.php"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#00d4ff;--c2:#ff6b6b"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc orbit"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">PHP</span></div>
+            <h3 class="project-title">UCF Form</h3>
+            <p class="project-desc">Server-side form with PHP validation, sanitisation, and a styled UCF-branded
+              submission flow.</p>
+            <div class="project-tech"><span>PHP</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment02/form_entry.php" class="project-link"
+                target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#4ecdc4;--c2:#ff9a3c"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc neural"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2025</span><span class="project-type">PHP / HTML</span>
+            </div>
+            <h3 class="project-title">Car Website</h3>
+            <p class="project-desc">Multi-page static site with PHP templating and a clean automotive content layout.
+            </p>
+            <div class="project-tech"><span>PHP</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment01/assignment01/page_index.html"
+                class="project-link" target="_blank">Live Site ↗</a></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── App Prototypes & Design ── -->
+      <p class="proj-cat-label reveal">App Prototypes &amp; Design</p>
+      <div class="projects-grid projects-3">
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/G.png" alt="To-Do List App Login" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">UI
+                Prototype</span></div>
+            <h3 class="project-title">To-Do List App Login</h3>
+            <p class="project-desc">Login and onboarding screen designs for a task app prototype with a clean, minimal
+              UI style.</p>
+            <div class="project-tech"><span>UI Design</span><span>Prototyping</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <img src="img/Q.png" alt="Fitness App" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">UI
+                Prototype</span></div>
+            <h3 class="project-title">Fitness App</h3>
+            <p class="project-desc">Four-screen mobile prototype — home, core workout, settings, and login — with a
+              cohesive visual identity and component system across all states.</p>
+            <div class="project-tech"><span>UI Design</span><span>Prototyping</span><span>Visual Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <img src="img/logo.jpg" alt="Logo Design" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">Visual
+                Design</span></div>
+            <h3 class="project-title">Logo Design</h3>
+            <p class="project-desc">Original logo created in Photoshop, exploring typography, iconography, and brand
+              identity principles.</p>
+            <div class="project-tech"><span>Adobe Photoshop</span><span>Brand Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/restored.jpg" alt="Photo Restoration" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">Photo
+                Editing</span></div>
+            <h3 class="project-title">Photo Restoration</h3>
+            <p class="project-desc">Restored a damaged historical photograph in Photoshop — removing artifacts,
+              reconstructing detail, and correcting tone.</p>
+            <div class="project-tech"><span>Adobe Photoshop</span><span>Photo Restoration</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#4ecdc4;--c2:#c792ea"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc orbit"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">Graphic
+                Design</span></div>
+            <h3 class="project-title">Social Media Design — Chiropractic I</h3>
+            <p class="project-desc">Branded social media graphic for a chiropractic client, maintaining consistent
+              visual identity across formats.</p>
+            <div class="project-tech"><span>Adobe Photoshop</span><span>Graphic Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <div class="project-bg" style="--c1:#ff9a3c;--c2:#4ecdc4"></div>
+            <div class="project-mockup">
+              <div class="mockup-screen">
+                <div class="mc velocity"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2024</span><span class="project-type">Graphic
+                Design</span></div>
+            <h3 class="project-title">Social Media Design — Chiropractic II</h3>
+            <p class="project-desc">Second in the chiropractic series — alternate format and layout while preserving the
+              same brand system.</p>
+            <div class="project-tech"><span>Adobe Photoshop</span><span>Graphic Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── 3D & Game Design ── -->
+      <p class="proj-cat-label reveal">3D &amp; Game Design</p>
+      <div class="projects-grid projects-3">
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/Screenshot%202023-11-20%20at%209.47.10%20AM.png" alt="3D Design Unity" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2023</span><span class="project-type">3D / Game
+                Design</span></div>
+            <h3 class="project-title">3D Design — Unity</h3>
+            <p class="project-desc">Interactive 3D scene in Unity with environment setup, lighting configuration, and
+              basic game-object scripting.</p>
+            <div class="project-tech"><span>Unity</span><span>3D Design</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-1">
+          <div class="project-visual">
+            <img src="img/Screenshot%202023-12-08%20at%2011.55.11%20PM.png" alt="3D Design Maya I" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2023</span><span class="project-type">3D Design</span>
+            </div>
+            <h3 class="project-title">3D Design — Maya I</h3>
+            <p class="project-desc">First Maya project covering mesh modelling fundamentals, UV unwrapping, and basic
+              material application.</p>
+            <div class="project-tech"><span>Autodesk Maya</span><span>3D Modelling</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal reveal-delay-2">
+          <div class="project-visual">
+            <img src="img/Screenshot%202023-12-08%20at%2011.53.58%20PM.png" alt="3D Design Maya II" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2023</span><span class="project-type">3D Design</span>
+            </div>
+            <h3 class="project-title">3D Design — Maya II</h3>
+            <p class="project-desc">Advanced Maya scene with complex geometry, lighting rigs, and refined texture
+              mapping in a composed 3D environment.</p>
+            <div class="project-tech"><span>Autodesk Maya</span><span>Texturing</span><span>Lighting</span></div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact reveal">
+          <div class="project-visual">
+            <img src="img/robot%20kitbash.jpg" alt="Robot Kitbash Maya" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-year">2023</span><span class="project-type">3D Design</span>
+            </div>
+            <h3 class="project-title">Robot Kitbash — Maya</h3>
+            <p class="project-desc">Kitbash robot character assembled from combined mesh parts in Maya, demonstrating
+              creative model composition techniques.</p>
+            <div class="project-tech"><span>Autodesk Maya</span><span>Kitbashing</span><span>Character Design</span>
+            </div>
+            <div class="project-links"><a
+                href="https://students.gaim.ucf.edu/~ja895969/Jasmine%20Butterfield%20Portfolio/index.html"
+                class="project-link" target="_blank">Portfolio ↗</a></div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">03 / Skills</span>
+        <h2 class="section-title">Tech <em>stack</em></h2>
+      </div>
+      <div class="skills-container">
+
+        <div class="skills-category reveal">
+          <h3>Web Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>JavaScript</span><span>82%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>PHP / Server-Side</span><span>70%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>SQL / XML</span><span>65%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-1">
+          <h3>Programming Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>Java</span><span>80%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Python</span><span>76%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="76"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>C</span><span>72%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>C++</span><span>70%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-2">
+          <h3>Design &amp; Tools</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>Adobe Photoshop</span><span>80%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Autodesk Maya</span><span>68%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="68"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Unity</span><span>65%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Adobe InDesign</span><span>72%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tech-tags reveal" id="techTags"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">04 / Contact</span>
+        <h2 class="section-title">Let's <em>connect</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>I'm a recent graduate open to full-time roles, internships, and freelance work in web development,
+            digital design, or front-end engineering. Let's talk.</p>
+          <div class="contact-methods">
+            <a href="mailto:jasminebutterfield10@gmail.com" class="contact-method">
+              <span class="method-icon">✉</span>
+              <span>jasminebutterfield10@gmail.com</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jasmine-butterfield-b7a301167" class="contact-method" target="_blank">
+              <span class="method-icon">◈</span>
+              <span>Linkedin</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+          <div class="form-field">
+            <input type="text" id="fname" name="name" required placeholder=" ">
+            <label for="fname">Your Name</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="form-field">
+            <input type="email" id="femail" name="email" required placeholder=" ">
+            <label for="femail">Your Email</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="form-field">
+            <textarea id="fmessage" name="message" required placeholder=" " rows="5"></textarea>
+            <label for="fmessage">Your Message</label>
+            <div class="field-line"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">JB<span class="dot">.</span></span>
+
+        <p>Designed &amp; Built by Jasmine Butterfield</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
