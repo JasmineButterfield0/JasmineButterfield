@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasmine Butterfield — Digital Media &amp; Web Developer</title>
+  <meta name="description"
+    content="Digital Media &amp; Computer Science student at UCF, building web experiences, 3D worlds, and interactive designs.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <div class="nav-logo">JB<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Work</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name" data-text="Jasmine Butterfield">Jasmine Butterfield</h1>
+      <div class="hero-roles">
+        <span class="role-prefix">I build</span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">Digital Media graduate from the University of Central Florida specializing in Web and Social
+        Platforms with a minor in Computer Science. Passionate about building interactive web experiences, immersive 3D
+        worlds, and creative digital applications that blend technology with design. Experienced in web design, game
+        design, UX/UI design, and software development, with a focus on creating user-centered experiences through clean
+        code, visual
+        storytelling, and modern digital design.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+          <span class="code-filename">jasmine.ts</span>
+        </div>
+        <pre class="code-content"><code id="codeSnippet"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">01 / About</span>
+        <h2 class="section-title">Crafting <em>digital</em> experiences</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>As a graduate of the University of Central Florida, I developed a strong foundation in both Computer
+            Science and Digital Media. During my academic career, I gained experience in Java, C, C++, PHP, React
+            Native, and Python, while also building skills in front-end web development, client-side scripting, HTML,
+            JavaScript, and CSS. My technical and creative experience included working with industry-standard software
+            such as Adobe Photoshop, Adobe InDesign, Unity, Maya, Visual Studio, and Visual Studio Code. In addition, I
+            completed a Library & Information Science internship where I developed code to make the metadata cataloging
+            of aerial imagery process faster, strengthening my experience in organization, data management, and digital
+            archiving.</p>
+
+        </div>
+        <div class="about-stats">
+
+          <div class="stat-card reveal reveal-delay-1">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Years at UCF</span>
+          </div>
+
+          <div class="stat-card reveal reveal-delay-2">
+            <span class="stat-number" data-target="9">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">02 / Work</span>
+        <h2 class="section-title">All <em>Projects</em></h2>
+      </div>
+
+      <!-- ── Featured ── -->
+      <style>
+        /* ── Polaroid grid ── */
+        .grid-wrap {
+          padding: 48px 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        .grid {
+          display: flex;
+          width: 900px;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+        }
+
+        .grid-item {
+          width: 290px;
+          margin: 8px 0;
+          border: 1px solid pink;
+          padding: 30px;
+          box-sizing: border-box;
+          background-color: var(--surface);
+          font-family: 'Inter', sans-serif;
+          transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+          opacity: 0;
+          animation: cardIn 0.4s ease forwards;
+          background-color: white;
+
+
+        }
+
+        .grid-item:nth-child(1) {
+          animation-delay: 0.04s;
+        }
+
+        .grid-item:nth-child(2) {
+          animation-delay: 0.08s;
+        }
+
+        .grid-item:nth-child(3) {
+          animation-delay: 0.12s;
+        }
+
+        .grid-item:nth-child(4) {
+          animation-delay: 0.16s;
+        }
+
+        .grid-item:nth-child(5) {
+          animation-delay: 0.20s;
+        }
+
+        .grid-item:nth-child(6) {
+          animation-delay: 0.24s;
+        }
+
+        .grid-item:nth-child(7) {
+          animation-delay: 0.28s;
+        }
+
+        .grid-item:nth-child(8) {
+          animation-delay: 0.32s;
+        }
+
+        .grid-item:nth-child(9) {
+          animation-delay: 0.36s;
+        }
+
+        .grid-item:nth-child(10) {
+          animation-delay: 0.40s;
+        }
+
+        .grid-item:nth-child(11) {
+          animation-delay: 0.44s;
+        }
+
+        .grid-item:nth-child(12) {
+          animation-delay: 0.48s;
+        }
+
+        .grid-item:nth-child(13) {
+          animation-delay: 0.52s;
+        }
+
+        .grid-item:nth-child(14) {
+          animation-delay: 0.56s;
+        }
+
+        .grid-item:nth-child(15) {
+          animation-delay: 0.60s;
+        }
+
+        .grid-item:nth-child(16) {
+          animation-delay: 0.64s;
+        }
+
+        .grid-item:nth-child(17) {
+          animation-delay: 0.68s;
+        }
+
+        .grid-item:nth-child(18) {
+          animation-delay: 0.72s;
+        }
+
+        .grid-item:nth-child(19) {
+          animation-delay: 0.76s;
+        }
+
+        .grid-item:nth-child(20) {
+          animation-delay: 0.80s;
+        }
+
+        .grid-item:nth-child(21) {
+          animation-delay: 0.84s;
+        }
+
+        .grid-item:hover {
+          border-color: black;
+          transform: translateY(-5px);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-placeholder {
+          width: 100%;
+          height: 270px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+          font-size: 11px;
+          letter-spacing: 0.08em;
+          color: rgba(255, 255, 255, 0.35);
+          text-transform: uppercase;
+        }
+
+        .img {
+          width: 100%;
+          height: 270px;
+          object-fit: cover;
+          display: block;
+          filter: brightness(0.88) grayscale(10%);
+          transition: filter 0.3s;
+        }
+
+        .grid-item:hover .img {
+          filter: brightness(1) grayscale(0%);
+        }
+
+        .grid_item-title {
+          text-align: center;
+          padding: 10px 6px 8px;
+          font-size: 11px;
+          font-weight: 400;
+          letter-spacing: 0.04em;
+          color: black;
+        }
+
+        .grid_item-title a {
+          font-size: 11px;
+          color: black;
+          text-decoration: none;
+          letter-spacing: 0.04em;
+          transition: color 0.2s;
+        }
+
+        .grid_item-title a:hover {
+          color: #00aaaa;
+        }
+
+
+
+        /* Links */
+        .links-section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .links-col {
+          padding: 48px 64px;
+          border-right: 1px solid var(--border);
+        }
+
+        .links-col:last-child {
+          border-right: none;
+        }
+
+        .links-col h3 {
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: black;
+          margin-bottom: 24px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .link-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 14px 0;
+          border-bottom: 1px solid var(--border);
+          text-decoration: none;
+          color: var(--muted);
+          font-size: 15px;
+          transition: color 0.2s;
+        }
+
+        .link-item:last-child {
+          border-bottom: none;
+        }
+
+        .link-item:hover {
+          color: var(--text);
+        }
+
+        .link-item .arr {
+          font-size: 15px;
+          transition: transform 0.2s;
+          color: #000000;
+        }
+
+        .link-item:hover .arr {
+          transform: translate(2px, -2px);
+        }
+
+        .link-detail {
+          padding: 6px 0 14px;
+          font-family: 'Inter', sans-serif;
+          font-size: 15px;
+          font-weight: 300;
+          color: rgb(0, 0, 0);
+          line-height: 1.9;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .link-detail:last-child {
+          border-bottom: none;
+        }
+
+        .link-detail-label {
+          display: block;
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: black;
+          margin-bottom: 5px;
+        }
+
+        footer {
+          border-top: 1px solid var(--border);
+          padding: 28px 64px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 11px;
+          color: var(--dim);
+          letter-spacing: 0.04em;
+        }
+
+        @keyframes cardIn {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+
+      <div class="grid-wrap">
+        <div class="grid">
+
+          <div class="grid-item">
+            <img src="img/dog.png" class="img" alt="Survey Form">
+            <h3 class="grid_item-title">
+              <a href="https://students.gaim.ucf.edu/~ja895969/dig3716c/assignment2/survey.html" target="_blank">Survey
+                Form &ndash; JavaScript</a>
+            </h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2025-02-28 at 10.35.06 PM.png" class="img" alt="Women Art Website">
+            <h3 class="grid_item-title">
+              <a href="https://students.gaim.ucf.edu/~ja895969/final%20project/unstoppablewoman.html"
+                target="_blank">Women Art Website</a>
+            </h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/me.png" class="img" alt="Memory Lane">
+            <h3 class="grid_item-title">Memory Lane at UCF Website</h3>
+          </div>
+
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2025-02-28 at 10.33.42 PM.png" class="img" alt="Book Review">
+            <h3 class="grid_item-title">
+              <a href="https://students.gaim.ucf.edu/~ja895969/assignment%202-4/escapebook.html" target="_blank">Book
+                Review Website</a>
+            </h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2025-02-28 at 9.27.12 PM.png" class="img" alt="Website Prototype">
+            <h3 class="grid_item-title">Website Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2025-03-01 at 7.53.14 AM.png" class="img" alt="Jefferson Landing">
+            <h3 class="grid_item-title">
+              <a href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab10/part01/page_index.html"
+                target="_blank">Jefferson Landing &ndash; JavaScript</a>
+            </h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2025-03-01 at 7.22.07 AM.png" class="img" alt="Social Media Posting">
+            <h3 class="grid_item-title">
+              <a href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab10/part02/snake.html"
+                target="_blank">Social Media Posting &ndash; JavaScript</a>
+            </h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/G.png" class="img" alt="To Do List App">
+            <h3 class="grid_item-title">To-Do List App Login &ndash; Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Q.png" class="img" alt="Fitness App">
+            <h3 class="grid_item-title">Fitness App &ndash; Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/CORE1.png" class="img" alt="Fitness App Core">
+            <h3 class="grid_item-title">Fitness App Core Screen &ndash; Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/h.png" class="img" alt="Fitness App Home">
+            <h3 class="grid_item-title">Fitness App Home &ndash; Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/setting.png" class="img" alt="Fitness App Settings">
+            <h3 class="grid_item-title">Fitness App Settings &ndash; Prototype</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/logo.jpg" class="img" alt="Logo Design">
+            <h3 class="grid_item-title">Logo Design</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/before.png" class="img" alt="After Restoration">
+            <h3 class="grid_item-title">Photo Restoration &ndash; Before (Photoshop)</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/restored.jpg" class="img" alt="After Restoration">
+            <h3 class="grid_item-title">Photo Restoration &ndash; After (Photoshop)</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2023-11-20 at 9.47.10 AM.png" class="img" alt="Unity">
+            <h3 class="grid_item-title">3D Design &ndash; Unity</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2023-12-08 at 11.55.11 PM.png" class="img" alt="Maya I">
+            <h3 class="grid_item-title">3D Design &ndash; Maya I</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/Screenshot 2023-12-08 at 11.53.58 PM.png" class="img" alt="Maya II">
+            <h3 class="grid_item-title">3D Design &ndash; Maya II</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/robot kitbash.jpg" class="img" alt="Robot Kitbash">
+            <h3 class="grid_item-title">Robot Kitbash &ndash; Maya</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/d.png" class="img" alt="Chiropractic I">
+            <h3 class="grid_item-title">Social Media Design &ndash; Chiropractic I</h3>
+          </div>
+
+          <div class="grid-item">
+            <img src="img/sleep.png" class="img" alt="Chiropractic II">
+            <h3 class="grid_item-title">Social Media Design &ndash; Chiropractic I</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-header">Live Project Links</div>
+
+      <div class="links-section">
+        <div class="links-col">
+          <h3>Server-Side Projects</h3>
+          <a class="link-item" href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment06/login.php"
+            target="_blank">Review Website &ndash; PHP, XML, SQL <span class="arr">View Here</span></a>
+          <a class="link-item" href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment04/todo.php"
+            target="_blank">Thanksgiving To-Do List &ndash; PHP <span class="arr">View Here</span></a>
+          <a class="link-item" href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment02/form_entry.php"
+            target="_blank">UCF Form &ndash; PHP <span class="arr">View Here</span></a>
+          <a class="link-item"
+            href="https://students.gaim.ucf.edu/~ja895969/dig3134/assignment01/assignment01/page_index.html"
+            target="_blank">Car Website <span class="arr">View Here</span></a>
+        </div>
+        <div class="links-col">
+          <h3>JavaScript Projects</h3>
+          <a class="link-item" href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab0506/group01.html"
+            target="_blank">Season Survey &ndash; JavaScript <span class="arr">View Here</span></a>
+          <a class="link-item" href="https://students.gaim.ucf.edu/~ja895969/dig3716c/labs/lab11/gallery.html"
+            target="_blank">Gallery Website &ndash; JavaScript <span class="arr">View Here</span></a>
+        </div>
+      </div>
+
+      <div class="links-section" style="grid-template-columns: 1fr;">
+        <div class="links-col">
+          <h3>Static Sites</h3>
+          <a class="link-item" href="https://catcafe12.netlify.app" target="_blank">
+            Kitty Ice Cream Cafe <span class="arr">View Here</span>
+          </a>
+          <div class="link-detail">
+            <span class="link-detail-label">Tech Stack</span>
+            HTML5 &middot; CSS3 &middot; Vanilla JavaScript &middot; localStorage API &middot;
+            Netlify
+          </div>
+          <div class="link-detail">
+            <span class="link-detail-label">Retrospective</span>
+            Extended a five-page static cat cafe site by designing and building a fully client-side community
+            recommendation board from scratch. The core challenge was delivering post, delete, and like interactions
+            with zero backend &mdash; everything lives in localStorage, with a version key that flushes stale data
+            whenever the menu changes. Locked the submission form to the real menu via a dropdown that
+            auto-categorizes
+            entries on select, added manual HTML escaping throughout all user-generated rendering to prevent XSS, and
+            pre-seeded the feed so the page is never empty on first visit. Also updated the global nav and footer
+            across
+            all six pages and shipped a version-controlled data reset pattern so future menu edits don&rsquo;t leave
+            orphaned posts.
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">03 / Skills</span>
+        <h2 class="section-title">Tech <em>stack</em></h2>
+      </div>
+      <div class="skills-container">
+
+        <div class="skills-category reveal">
+          <h3>Web Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>JavaScript</span><span>82%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>PHP / Server-Side</span><span>70%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>SQL / XML</span><span>65%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-1">
+          <h3>Programming Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>Java</span><span>80%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Python</span><span>76%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="76"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>C</span><span>72%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>C++</span><span>70%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal reveal-delay-2">
+          <h3>Design &amp; Tools</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-header"><span>Adobe Photoshop</span><span>80%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Autodesk Maya</span><span>68%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="68"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Unity</span><span>65%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-header"><span>Adobe InDesign</span><span>72%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tech-tags reveal" id="techTags"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">04 / Contact</span>
+        <h2 class="section-title">Let's <em>connect</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>I'm a recent graduate open to full-time roles, internships, and freelance work in web development,
+            digital design, or front-end engineering. Let's talk.</p>
+          <div class="contact-methods">
+            <a href="mailto:jasminebutterfield10@gmail.com" class="contact-method">
+              <span class="method-icon">✉</span>
+              <span>jasminebutterfield10@gmail.com</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jasmine-butterfield-b7a301167" class="contact-method" target="_blank">
+              <span class="method-icon">◈</span>
+              <span>Linkedin</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+          <div class="form-field">
+            <input type="text" id="fname" name="name" required placeholder=" ">
+            <label for="fname">Your Name</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="form-field">
+            <input type="email" id="femail" name="email" required placeholder=" ">
+            <label for="femail">Your Email</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="form-field">
+            <textarea id="fmessage" name="message" required placeholder=" " rows="5"></textarea>
+            <label for="fmessage">Your Message</label>
+            <div class="field-line"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">JB<span class="dot">.</span></span>
+
+        <p>Designed &amp; Built by Jasmine Butterfield</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
